@@ -1,13 +1,28 @@
 module MergeSort
+  DEBUG_LOG_ENABLED = true
+
+  def self.debug_log(msg)
+    puts(msg)
+  end
+
   def self.sort(xs)
-    return xs if xs.count == 1
+    debug_log("Sorting #{xs}...")
+
+    if xs.count <= 1
+      debug_log("Only one element, done!")
+      return xs
+    end
 
     first_half, second_half = split(xs)
+    debug_log("Split #{xs} into #{first_half} and #{second_half}.")
 
     sorted_first_half = sort(first_half)
     sorted_second_half = sort(second_half)
 
-    merge(sorted_first_half, sorted_second_half)
+    debug_log("Putting sorted halves #{sorted_first_half} and #{sorted_second_half} together...")
+    result = merge(sorted_first_half, sorted_second_half)
+    debug_log("Got #{result}!")
+    result
   end
 
   def self.split(xs)

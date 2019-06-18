@@ -2,9 +2,17 @@ require 'rspec'
 require_relative '../lib/merge_sort'
 
 describe MergeSort do
+  before(:all) do
+    # MergeSort::DEBUG_LOG_ENABLED = false
+  end
+
   describe 'sort' do
     it 'is a function that sorts arrays' do
       expect(MergeSort.sort([0])).to eq([0])
+    end
+
+    it 'returns an empty array if input is empty' do
+      expect(MergeSort.sort([])).to eq([])
     end
 
     it 'sorts an array in reverse order' do
@@ -65,6 +73,14 @@ describe MergeSort do
 
     it 'combines array elements in ascending order when there are large differences in the elements' do
       expect(MergeSort.merge([1, 100], [5, 50])).to eq([1, 5, 50, 100])
+    end
+
+    it 'returns all elements of first array if second is empty' do
+      expect(MergeSort.merge([1, 2], [])).to eq([1, 2])
+    end
+
+    it 'returns all elements of second array if first is empty' do
+      expect(MergeSort.merge([], [3, 4])).to eq([3, 4])
     end
   end
 end

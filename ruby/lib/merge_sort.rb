@@ -1,11 +1,19 @@
-module MergeSort
-  DEBUG_LOG_ENABLED = true
+class MergeSort
+  attr_accessor :debug_enabled
 
-  def self.debug_log(msg)
-    puts(msg)
+  def initialize(debug_enabled: true)
+    self.debug_enabled = debug_enabled
+    @indent = -1
   end
 
-  def self.sort(xs)
+  def debug_log(msg)
+    padding = "  " * @indent
+    puts(padding + msg) if debug_enabled
+  end
+
+  def sort(xs)
+    @indent += 1
+
     debug_log("Sorting #{xs}...")
 
     if xs.count <= 1
@@ -21,17 +29,20 @@ module MergeSort
 
     debug_log("Putting sorted halves #{sorted_first_half} and #{sorted_second_half} together...")
     result = merge(sorted_first_half, sorted_second_half)
+
     debug_log("Got #{result}!")
     result
+  ensure
+    @indent -= 1
   end
 
-  def self.split(xs)
+  def split(xs)
     return xs if xs.count <= 1
     middle = (xs.count / 2).floor
     [xs[0...middle], xs[middle..-1]]
   end
 
-  def self.merge(xs, ys)
+  def merge(xs, ys)
     x_cursor = 0
     y_cursor = 0
     result = []

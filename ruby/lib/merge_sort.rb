@@ -17,31 +17,24 @@ module MergeSort
   end
 
   def self.merge(xs, ys)
-    xs_enum = xs.to_enum
-    ys_enum = ys.to_enum
+    x_cursor = 0
+    y_cursor = 0
     result = []
-    while xs_enum.has_next? || ys_enum.has_next?
-      if !ys_enum.has_next?
-        result << xs_enum.next
-      elsif !xs_enum.has_next?
-        result << ys_enum.next
-      elsif xs_enum.peek <= ys_enum.peek
-        result << xs_enum.next
+    while x_cursor < xs.count || y_cursor < ys.count
+      if y_cursor == ys.count
+        result << xs[x_cursor]
+        x_cursor += 1
+      elsif x_cursor == xs.count
+        result << ys[y_cursor]
+        y_cursor += 1
+      elsif xs[x_cursor] <= ys[y_cursor]
+        result << xs[x_cursor]
+        x_cursor += 1
       else
-        result << ys_enum.next
+        result << ys[y_cursor]
+        y_cursor += 1
       end
     end
     result
-  end
-end
-
-class Enumerator
-  def has_next?
-    begin
-      _ = peek
-      return true
-    rescue StopIteration
-      return false
-    end
   end
 end

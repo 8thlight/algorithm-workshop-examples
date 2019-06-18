@@ -48,7 +48,7 @@ describe MergeSort do
     end
 
     it 'combines array elements in ascending order when there are large differences in the elements' do
-      expect(MergeSort.merge([1, 100], [50, 5])).to eq([1, 5, 50, 100])
+      expect(MergeSort.merge([1, 100], [5, 50])).to eq([1, 5, 50, 100])
     end
   end
 end

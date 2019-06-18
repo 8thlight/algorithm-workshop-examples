@@ -6,6 +6,22 @@ describe MergeSort do
     it 'is a function that sorts arrays' do
       expect(MergeSort.sort([0])).to eq([0])
     end
+
+    it 'sorts an array in reverse order' do
+      expect(MergeSort.sort([3, 2, 1, 0])).to eq([0, 1, 2, 3])
+    end
+
+    sorted = [-100, 0, 0, 3, 4, 5, 10, 55, 1000]
+
+    it 'returns an identical copy of a sorted array' do
+      expect(MergeSort.sort(sorted)).to eq(sorted)
+    end
+
+    it 'has the same result for each permutation of a sorted list' do
+      sorted.permutation.take(100) do |permutation|
+        expect(MergeSort.sort(permutation)).to eq(sorted)
+      end
+    end
   end
 
   describe 'split' do

@@ -1,6 +1,6 @@
 # Algorithm Workshop Code Examples
 
-This repo contains implementations of the following algorithms in the following languages:
+This repo contains example implementations of the following algorithms and languages:
 
 <table>
 <tr>

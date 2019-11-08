@@ -6,13 +6,16 @@ This repo contains example implementations of the following algorithms and langu
 <tr>
   <th>Algorithm</th>
   <th>Ruby</th>
+  <th>Swift</th>
 </tr>
 <tr>
   <td>Factorial</td>
-  <td>✅</td>
+  <td>✅</td><!-- Ruby -->
+  <td>✅</td><!-- Swift -->
 </tr>
 <tr>
   <td>Merge sort</td>
-  <td>✅</td>
+  <td>✅</td><!-- Ruby -->
+  <td></td><!-- Swift -->
 </tr>
 </table>

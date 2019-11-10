@@ -1,6 +1,6 @@
 # Algorithm Workshop Code Examples
 
-This repo contains example implementations of the following algorithms and languages:
+This repo contains example implementations of the following algorithms:
 
 <table>
 <tr>
@@ -16,6 +16,6 @@ This repo contains example implementations of the following algorithms and langu
 <tr>
   <td>Merge sort</td>
   <td>✅</td><!-- Ruby -->
-  <td></td><!-- Swift -->
+  <td>✅</td><!-- Swift -->
 </tr>
 </table>

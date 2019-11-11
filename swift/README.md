@@ -1,4 +1,4 @@
-# Swift Alogrithm Implementations
+# Swift Algorithm Examples 
 
 ## Prerequisites
 

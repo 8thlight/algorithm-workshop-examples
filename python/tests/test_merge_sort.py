@@ -23,6 +23,10 @@ def test_unordered():
     assert merge_sort([1, 0, 2]) == [0, 1, 2]
 
 
+def test_unordered_longer():
+    assert merge_sort([100, -1, 1, 0, 2, 0.5, 0.01]) == [-1, 0, 0.01, 0.5, 1, 2, 100]
+
+
 def test_split_empty():
     assert split([]) == ([], [])
 

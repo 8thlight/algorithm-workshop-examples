@@ -21,4 +21,10 @@ This repo contains example implementations of the following algorithms:
   <td>✅</td><!-- Swift -->
   <td>✅</td><!-- Python -->
 </tr>
+<tr>
+  <td>Quick sort</td>
+  <td></td><!-- Ruby -->
+  <td></td><!-- Swift -->
+  <td>✅</td><!-- Python -->
+</tr>
 </table>

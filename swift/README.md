@@ -8,9 +8,13 @@
 
 ## Getting Started
 
-## Contributing
+Run the tests on the command line:
 
-Build an Xcode project from the Swift package:
+```shell
+swift test
+```
+
+Or using the Xcode project:
 
 ```shell
 swift package generate-xcodeproj

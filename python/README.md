@@ -9,11 +9,15 @@
 
 ## Getting Started
 
+> ℹ️ All commands below are meant to be run from the repo's `python` directory.
+
 Install dependencies:
 
 ```shell
-pipenv sync
+PIPENV_VENV_IN_PROJECT="enabled" pipenv sync -d
 ```
+
+> ℹ️ `PIPENV_VENV_IN_PROJECT="enabled"` allows VSCode to find the environment setup by pipenv.
 
 Run the tests:
 

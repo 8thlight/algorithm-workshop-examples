@@ -1,0 +1,11 @@
+{
+    "python.pythonPath": "${workspaceFolder}/python/.venv/bin/python",
+    "python.testing.pytestArgs": [
+        "python/tests"
+    ],
+    "python.testing.pytestEnabled": true,
+    "pythonTestExplorer.testFramework": "pytest",
+    "python.linting.mypyEnabled": true,
+    "python.venvPath": "${workspaceFolder}/python/.venv",
+    "python.linting.enabled": true
+}

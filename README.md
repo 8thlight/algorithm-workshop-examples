@@ -13,12 +13,12 @@ This repo contains example implementations of the following algorithms:
   <td>Factorial</td>
   <td>✅</td><!-- Ruby -->
   <td>✅</td><!-- Swift -->
-  <td></td><!-- Python -->
+  <td>✅</td><!-- Python -->
 </tr>
 <tr>
   <td>Merge sort</td>
   <td>✅</td><!-- Ruby -->
   <td>✅</td><!-- Swift -->
-  <td></td><!-- Python -->
+  <td>✅</td><!-- Python -->
 </tr>
 </table>

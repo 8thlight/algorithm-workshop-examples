@@ -8,7 +8,6 @@ def quicksort(xs: List[T]) -> List[T]:
         return xs
     lt_pivot, pivot, gt_pivot = partition(xs)
     return quicksort(lt_pivot) + [pivot] + quicksort(gt_pivot)
-    return xs
 
 def partition(xs: List[T], pivot_index=None) -> Tuple[List[T], T, List[T]]:
     if len(xs) == 0:

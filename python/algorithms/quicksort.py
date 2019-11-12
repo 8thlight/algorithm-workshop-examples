@@ -10,7 +10,6 @@ def quicksort(xs: List[T]) -> List[T]:
     return quicksort(lt_pivot) + [pivot] + quicksort(gt_pivot)
     return xs
 
-
 def partition(xs: List[T], pivot_index=None) -> Tuple[List[T], T, List[T]]:
     if len(xs) == 0:
         raise ValueError("Cannot partition empty list")

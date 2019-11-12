@@ -12,11 +12,9 @@ def merge_sort(xs: List[E]):
     s_right = merge_sort(right)
     return merge_sorted(s_left, s_right)
 
-
 def split(xs: List[E]) -> Tuple[List[E], List[E]]:
     middle = floor(len(xs) / 2)
     return (xs[:middle], xs[middle:])
-
 
 def merge_sorted(xs: List[Any], ys: List[Any]) -> List[Any]:
     merged = []

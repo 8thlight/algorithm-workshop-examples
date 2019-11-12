@@ -17,25 +17,52 @@ def split(xs: List[E]) -> Tuple[List[E], List[E]]:
     return (xs[:middle], xs[middle:])
 
 def merge_sorted(xs: List[Any], ys: List[Any]) -> List[Any]:
-    merged = []
-    ixs = 0
-    len_xs = len(xs)
-    iys = 0
-    len_ys = len(ys)
-    while ixs < len_xs or iys < len_ys:
-        x = xs[ixs] if ixs < len_xs else None
-        y = ys[iys] if iys < len_ys else None
-        if x is not None and y is not None:
-            if x < y:
-                merged.append(x)
-                ixs += 1
-            else:
-                merged.append(y)
-                iys += 1
-        elif x is None:
+    merged: List[Any] = []
+    ixs = iter(xs) 
+    iys = iter(ys) 
+    x = next(ixs, None)
+    y = next(iys, None)
+    while x is not None or y is not None:
+        if x is None:
             merged.append(y)
-            iys += 1
-        else:
+            y = next(iys, None)
+        elif y is None:
             merged.append(x)
-            ixs += 1
+            x = next(ixs, None)
+        elif x < y:
+            merged.append(x)
+            x = next(ixs, None)
+        else:
+            merged.append(y)
+            y = next(iys, None)
     return merged
+
+# Recursive implementation of merge_sorted
+def rec_merge_sorted(xs, ys, x = None, y = None, merged = None) -> List[Any]:
+    ixs = iter(xs)
+    iys = iter(ys)
+
+    if merged is None:
+        merged = []
+    if x is None:
+        x = next(ixs, None)
+    if y is None:
+        y = next(iys, None)
+
+    if x is None:
+        if y is None:
+            return merged
+        else:
+            merged.append(y)
+            y = next(iys, None)
+    elif y is None:
+        merged.append(x)
+        x = next(ixs, None)
+    elif x < y:
+        merged.append(x)
+        x = next(ixs, None)
+    else:
+        merged.append(y)
+        y = next(iys, None)
+
+    return rec_merge_sorted(ixs, iys, x, y, merged)

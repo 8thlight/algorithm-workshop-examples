@@ -18,8 +18,8 @@ def partition(xs: List[T], pivot_index=None) -> Tuple[List[T], T, List[T]]:
     sorted = [pivot]
     lt_pivot = []
     gt_pivot = []
-    for i, x in enumerate(xs):
-        if i == pivot_index:
+    for x in xs:
+        if x is pivot:
             continue
         elif x < pivot:
             lt_pivot.append(x)

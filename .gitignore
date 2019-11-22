@@ -3,3 +3,8 @@ __pycache__
 .pytest_cache
 .mypy_cache
 .ropeproject/
+
+# csharp 
+bin/
+obj/
+packages/

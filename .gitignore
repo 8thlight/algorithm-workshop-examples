@@ -3,3 +3,10 @@ __pycache__
 .pytest_cache
 .mypy_cache
 .ropeproject/
+
+# csharp 
+.idea/
+bin/
+obj/
+packages/
+.DS_Store

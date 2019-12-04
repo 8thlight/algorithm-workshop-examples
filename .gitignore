@@ -5,8 +5,6 @@ __pycache__
 .ropeproject/
 
 # csharp 
-.idea/
 bin/
 obj/
 packages/
-.DS_Store

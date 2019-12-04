@@ -15,7 +15,7 @@ This repo contains example implementations of the following algorithms:
   <td>✅</td><!-- Ruby -->
   <td>✅</td><!-- Swift -->
   <td>✅</td><!-- Python -->
-  <td></td><!-- C# -->
+  <td>✅</td><!-- C# -->
 </tr>
 <tr>
   <td>Merge sort</td>
@@ -39,3 +39,4 @@ This repo contains example implementations of the following algorithms:
   <td></td><!-- C# -->
 </tr>
 </table>
+
